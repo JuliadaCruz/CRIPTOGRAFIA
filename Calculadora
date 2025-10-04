@@ -1,0 +1,21 @@
+print("Calculadora de Notas")
+
+nome = input("Digite o nome do aluno: ")
+nota1 = float(input("Digite a 1ª nota: "))
+nota2 = float(input("Digite a 2ª nota: "))
+meta = float(input("Digite a meta mínima para aprovação: "))
+
+media = (nota1 + nota2) / 2
+
+print(f"\nAluno: {nome}")
+print(f"Média: {media:.2f}")
+print(f"Meta mínima: {meta:.2f}")
+
+if media >= meta:
+    status = "Aprovado"
+elif media >= meta * 0.6:
+    status = "Em recuperação"
+else:
+    status = "Reprovado"
+
+print(f"Status: {status}")
